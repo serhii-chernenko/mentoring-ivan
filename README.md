@@ -73,7 +73,7 @@ Which tool could be used during the mentoring:
         3. Events listener
 2. **Phase 2** — Intensive JS practice
     1. Local Storage — JS data storing.
-    2. Even loop — asynchronous operations
+    2. Event loop — asynchronous operations
     3. Fetch and render data
     4. Write books app with searchable listing, pagination and details page
 3. **Phase 3** — Jumping to libraries
