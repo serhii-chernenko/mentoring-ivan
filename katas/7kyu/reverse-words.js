@@ -1,10 +1,6 @@
-function solution(str, ending) {
-    if (ending === '') return true;
+function reverseWords(str) {
+    const words = str.split(/\s/);
+    const wordsReverse = words.map(word => word.split('').reverse().join(''));
 
-    const endingLength = ending.length;
-    const strEnd = str.slice(-endingLength);
-
-    if (strEnd === ending) return true;
-
-    return false;
+    return wordsReverse.join(/\s/);
 }
