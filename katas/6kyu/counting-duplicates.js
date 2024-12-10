@@ -1,7 +1,17 @@
 function duplicateCount(text) {
     const letters = text.toLowerCase().split('');
-    const dubbles = letters.filter((letter, index, array) => array.indexOf(letter) !== index);
-    const uniqDubbles = new Set(dubbles);
+    let counter = 0;
+    let memo = {};
 
-    return uniqDubbles.size;
+    if (!letters.length) return 0;
+
+    letters.forEach(letter => {
+        if (memo[letter] && memo[letter] === 1) {
+            ++counter;
+            memo[letter] = 2;
+        }
+        if (!memo[letter]) memo[letter] = 1;
+    });
+
+    return counter;
 }
